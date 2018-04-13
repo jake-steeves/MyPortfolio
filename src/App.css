@@ -1,37 +1,43 @@
 #wrapper {
-  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
-  display: flex;
+  background: #edf2f5;
+
   height: 100vh;
   width: 100%;
 }
 
 #infoHolder {
-  align-items: center;
-  align-self: center;
-
-  background: #f8ffff;
-  box-shadow: 1px 1px 1px 3px #f4ffff;
-
-  color: #595959;
+  background-image: url("dark_bg.png");
+  //background: #f8ffff;
+  box-shadow: 0px 2px 1px 2px #282525;
 
   display: flex;
-  font-size: 2em;
+  align-items: center;
+
+  height: 45%;
+  width: 100%;
+}
+
+#detailHolder {
+  color: #edf3f8;
+
+  font-size: 2.25em;
   font-family: 'Roboto', 'sans-serif';
 
-  margin: 0 auto 0 auto;
-  padding: 15px;
+  margin: 0 10% 0 auto;
 
-  height: 40%;
-  width: 40%;
+  position: relative;
 }
 
 #myPic {
-  box-shadow: 0px 1px 5px 2px #404040;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px 3px #353131;
 
-  margin-right: 20px;
+  margin: -13% 0 0 5%;
+  //margin-right: 20px;
+
 
   height: auto;
-  width: 35%;
+  width: 25%;
 }
 
 .App {
