@@ -1,3 +1,39 @@
+#wrapper {
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+#infoHolder {
+  align-items: center;
+  align-self: center;
+
+  background: #f8ffff;
+  box-shadow: 1px 1px 1px 3px #f4ffff;
+
+  color: #595959;
+
+  display: flex;
+  font-size: 2em;
+  font-family: 'Roboto', 'sans-serif';
+
+  margin: 0 auto 0 auto;
+  padding: 15px;
+
+  height: 40%;
+  width: 40%;
+}
+
+#myPic {
+  box-shadow: 0px 1px 5px 2px #404040;
+
+  margin-right: 20px;
+
+  height: auto;
+  width: 35%;
+}
+
 .App {
   text-align: center;
 }
