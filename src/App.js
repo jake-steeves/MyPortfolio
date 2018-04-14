@@ -10,9 +10,14 @@ const myDetails = {
   myBirthDay: new Date(1997, 6, 5)
 };
 
+const Navbar = (props) => (
+  // TODO: add a navbar
+  <div id="navbar"></div>
+);
 
-const Info = (props) => (
-  <div id="infoHolder">
+const Header = (props) => (
+  <div id="header">
+    <Navbar />
     <div id="detailHolder">
       <div>{props.details.myName}</div>
       <div>{props.details.myUni}</div>
@@ -32,20 +37,9 @@ class App extends Component {
   render() {
     return (
       <div id="wrapper">
-        <Info details={myDetails} age={App.getAge()} /> 
+        <Header details={myDetails} age={App.getAge()} /> 
         <img src={myPic} id="myPic"/>
       </div>
-/*
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Testing</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-*/
     );
   }
 }
