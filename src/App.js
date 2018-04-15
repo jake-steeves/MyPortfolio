@@ -12,13 +12,13 @@ const myDetails = {
 
 const Navbar = (props) => (
   // TODO: add a navbar
-  <div id="navbar"></div>
+  <div class="navbar"></div>
 );
 
 const Header = (props) => (
-  <div id="header">
+  <div class="header">
     <Navbar />
-    <div id="detailHolder">
+    <div class="detailHolder">
       <div>{props.details.myName}</div>
       <div>{props.details.myUni}</div>
       <div>{props.details.myConc}</div>
@@ -36,9 +36,9 @@ class App extends Component {
 
   render() {
     return (
-      <div id="wrapper">
+      <div class="wrapper">
         <Header details={myDetails} age={App.getAge()} /> 
-        <img src={myPic} id="myPic"/>
+        <img src={myPic} class="myPic"/>
       </div>
     );
   }
