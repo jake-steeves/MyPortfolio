@@ -1,0 +1,87 @@
+.tileHandler {
+  box-shadow: 0 0 1px 3px #0d0c0c;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Roboto', 'sans-serif';
+
+  margin: 5px;
+  padding: 20px;
+}
+
+.tileHandler:hover {
+  box-shadow: 0 0 3px 4px #0d0c0c;
+
+}
+
+.preview {
+  flex: 0 33%;
+  height: 150px;
+
+}
+
+.expanded {
+  flex: 0 73%;
+
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.prevTitle {
+  font-size: 28px;
+  margin-bottom: 10px; 
+}
+
+.expandedDetails {
+  cursor: auto;
+}
+
+.expTitle {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.technicalDetails {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+}
+
+.linksHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 0 60%;
+  justify-content: center;
+}
+
+.linksHolder a {
+  margin: 5px 10px;
+}
+
+.languagesHolder {
+  display: flex;
+  flex-flow: row wrap;
+
+  flex: 0 35%;
+  justify-content: center;
+}
+
+.languageIcon {
+  box-shadow: 0 0 1px 2px #423d3d;
+
+  height: 25px;
+  font-size: 14px;
+
+  flex: 0 30%;
+
+  margin: 5px 5px;
+  padding: 10px 0 0 0;
+  text-align: center;
+}

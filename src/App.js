@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Tile from './Tile.js';
+import projects from './projects.js';
+
+// imports for styling
 import myPic from './croppedpic.jpg';
-import background from './dark_bg.png';
 import './App.css';
+import './Tile.css';
 
 const myDetails = {
   myName: "Jake Steeves",
@@ -12,13 +16,13 @@ const myDetails = {
 
 const Navbar = (props) => (
   // TODO: add a navbar
-  <div class="navbar"></div>
+  <div className="navbar"></div>
 );
 
 const Header = (props) => (
-  <div class="header">
+  <div className="header">
     <Navbar />
-    <div class="detailHolder">
+    <div className="detailHolder">
       <div>{props.details.myName}</div>
       <div>{props.details.myUni}</div>
       <div>{props.details.myConc}</div>
@@ -27,7 +31,7 @@ const Header = (props) => (
   </div>
 );
 
-class App extends Component {
+export default class App extends Component {
   static getAge() {
     let msDiff = Date.now() - myDetails.myBirthDay;
     let ageDate = new Date(msDiff);
@@ -36,12 +40,16 @@ class App extends Component {
 
   render() {
     return (
-      <div class="wrapper">
+      <div className="wrapper">
         <Header details={myDetails} age={App.getAge()} /> 
-        <img src={myPic} class="myPic"/>
+        <img src={myPic} className="myPic"/>
+
+        <div className="tileWrapper">
+          {projects.map(project => (
+            <Tile {...project} /> 
+          ))}
+        </div>
       </div>
     );
   }
 }
-
-export default App;
