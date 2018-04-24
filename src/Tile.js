@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 
 const TilePreview = (props) => (
   <div className="previewDetails"> 
@@ -38,24 +39,49 @@ export default class Tile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      'isExpanded': false,
-      'tileClass': 'preview'
+      'showModal': false,
+      'image': ''
     }
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+  
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
   }
 
   changeTile() {
     this.setState(prevState => ({
-      'isExpanded': !prevState.isExpanded,
-      'tileClass': !prevState.isExpanded ? 'expanded' : 'preview'
+      'showModal': !prevState.showModal
+      //'tileClass': !prevState.isExpanded ? 'expanded' : 'preview'
     }));
+  }
+
+  componentWillMount() {
+      Modal.setAppElement('body');
+      this.setState({ 'image': require('./' + this.props.image)});
   }
 
   render() {
     return (
-      <div className={"tileHandler " + this.state.tileClass} 
-            onClick={() => this.changeTile()}>
-        {this.state.isExpanded ? (<TileExpanded {...this.props} />) : 
-                                  (<TilePreview {...this.props} />)}
+      <div className="modalWrapper">
+        <div className="preview" onClick={this.handleOpenModal} 
+            style={{backgroundImage: `url(${this.state.image})`}}>
+          <TilePreview {...this.props} />
+        </div>
+        <Modal
+          isOpen={this.state.showModal}
+          contentLabel="fullProjectInfo"
+          onRequestClose={this.handleCloseModal}
+          className="expanded"
+          overlayClassName="overlay">
+          <button onClick={this.handleCloseModal}>X</button>
+          <TileExpanded {...this.props} />
+        </Modal>
       </div>
     )
   }
