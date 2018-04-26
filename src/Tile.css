@@ -1,0 +1,118 @@
+.modalWrapper {
+  flex: 0 0 25%;
+  margin: 2%;
+}
+
+.preview {
+  box-shadow: 0 0 1px 3px #0d0c0c;
+  border-radius: 5px;
+
+  color: #edf3f8;
+  text-shadow: 1px 1px #0d0c0c;
+  cursor: pointer;
+
+  background-position: 50% 50%;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Roboto', 'sans-serif';
+
+  height: 250px;
+
+  margin: 5px;
+  padding: 20px;
+}
+
+.preview:hover {
+  box-shadow: 0 0 2px 4px #0d0c0c;
+
+}
+
+.expanded {
+  background-color: #edf2f5;
+  box-shadow: 1px 1px 5px 1px #0d0c0c;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+
+  padding: 20px;
+
+  overflow-y: scroll;
+}
+
+.expanded:focus {
+  outline: none;
+}
+
+.prevTitle {
+  font-size: 28px;
+  margin-bottom: 10px; 
+}
+
+.expandedDetails {
+  cursor: auto;
+}
+
+.expTitle {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.technicalDetails {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+}
+
+.linksHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 0 60%;
+  justify-content: center;
+}
+
+.linksHolder a {
+  margin: 5px 10px;
+}
+
+.languagesHolder {
+  display: flex;
+  flex-flow: row wrap;
+
+  flex: 0 35%;
+  justify-content: center;
+}
+
+.languageIcon {
+  box-shadow: 0 0 1px 2px #423d3d;
+  border-radius: 10px;
+
+  height: 25px;
+  font-size: 14px;
+
+  flex: 0 30%;
+
+  margin: 5px 5px;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.70);
+}
