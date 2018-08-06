@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { themeGet } from 'styled-system'
 
 export const AppWrapper = styled.div`
   background: #edf2f5;
@@ -18,7 +19,7 @@ export const MyPicture = styled.img`
 `
 
 export const Header = styled.div`
-  background-image: url('dark_bg.png');
+  background-color: ${themeGet('colors.secondary')};
   box-shadow: 0px 2px 1px 2px #0d0c0c;
 
   display: flex;
