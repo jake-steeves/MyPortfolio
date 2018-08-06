@@ -1,9 +1,12 @@
-.modalWrapper {
+import styled from 'styled-components'
+
+export const ModalWrapper = styled.div`
   flex: 0 0 25%;
   margin: 2%;
-}
+`
 
-.preview {
+export const ProjectPreview = styled.div`
+  background-image: url(${props => props.background});
   box-shadow: 0 0 1px 3px #0d0c0c;
   border-radius: 5px;
 
@@ -23,78 +26,57 @@
 
   margin: 5px;
   padding: 20px;
-}
 
-.preview:hover {
-  box-shadow: 0 0 2px 4px #0d0c0c;
+  &:hover {
+    box-shadow: 0 0 2px 4px #0d0c0c;
+  }
+`
 
-}
-
-.expanded {
-  background-color: #edf2f5;
-  box-shadow: 1px 1px 5px 1px #0d0c0c;
-  border-radius: 5px;
-
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-
-  padding: 20px;
-
-  overflow-y: scroll;
-}
-
-.expanded:focus {
-  outline: none;
-}
-
-.prevTitle {
+export const PreviewTitle = styled.div`
   font-size: 28px;
-  margin-bottom: 10px; 
-}
+  margin-bottom: 10px;
+`
 
-.expandedDetails {
+export const ExpandedDetails = styled.div`
   cursor: auto;
-}
+`
 
-.expTitle {
+export const ExpandedTitle = styled.div`
   font-size: 36px;
   margin-bottom: 20px;
 
   text-align: center;
-}
+`
 
-.technicalDetails {
+export const TechnicalDetails = styled.div`
   display: flex;
   flex-direction: row;
 
   margin-bottom: 20px;
-}
+`
 
-.linksHolder {
+export const LinksHolder = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   flex: 0 60%;
   justify-content: center;
-}
+`
 
-.linksHolder a {
+export const ProjectLink = styled.div`
   margin: 5px 10px;
-}
+`
 
-.languagesHolder {
+export const LanguagesHolder = styled.div`
   display: flex;
   flex-flow: row wrap;
 
   flex: 0 35%;
   justify-content: center;
-}
+`
 
-.languageIcon {
+export const Language = styled.div`
   box-shadow: 0 0 1px 2px #423d3d;
   border-radius: 10px;
 
@@ -106,13 +88,4 @@
   margin: 5px 5px;
   padding: 10px 0 0 0;
   text-align: center;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.70);
-}
+`

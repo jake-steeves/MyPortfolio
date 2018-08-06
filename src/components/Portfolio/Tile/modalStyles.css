@@ -1,0 +1,30 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.modalExpanded {
+  background-color: #edf2f5;
+  box-shadow: 1px 1px 5px 1px #0d0c0c;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+
+  padding: 20px;
+}
+
+.modalExpanded:expanded {
+  outline: none;
+}
+
+.modalExpanded:focus {
+  outline: none;
+}
