@@ -9,6 +9,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "global-require": 0,
     "semi": ["error", "never"],
     "prettier/prettier": [
       "error",
@@ -18,8 +19,11 @@
       }
     ],
     "import/first": 0,
+    "import/no-dynamic-require": 0,
     "react/prop-types": 0,
     "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/destructuring-assignment": 0,
     "react/prefer-stateless-function": 0,
     "react/no-unused-state": 0,
     "import/prefer-default-export": 0,
