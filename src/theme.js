@@ -1,8 +1,8 @@
 const theme = {
   colors: {
-    primary: 'white',
-    secondary: '#0A3566', // Blue
-    tertiary: '#9D5C63' // Brick
+    primary: '#EEF0F2',
+    secondary: '#123461', // Blue
+    tertiary: '#BA948B' // Brick
   }
 }
 
