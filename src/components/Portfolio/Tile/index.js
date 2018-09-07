@@ -6,63 +6,57 @@ import {
   PreviewTitle,
   ExpandedDetails,
   ExpandedTitle,
-  TechnicalDetails,
+  DetailsHolder,
   LinksHolder,
   ProjectLink,
-  LanguagesHolder,
-  Language
+  TechnologiesHolder,
+  Technology
 } from './styles'
 import './modalStyles.css'
 
-const TilePreview = props => {
-  const { title, blurb } = props
+const TechnologyIcon = props => {
+  const { technology } = props
+  return <Technology>{technology}</Technology>
+}
+
+const TechnologyDetails = props => {
+  const { technologies } = props
   return (
-    <div>
-      <PreviewTitle>{title}</PreviewTitle>
-      <div>{blurb}</div>
-    </div>
+    <TechnologiesHolder>
+      {technologies.map(technology => (
+        <TechnologyIcon key={technology} technology={technology} />
+      ))}
+    </TechnologiesHolder>
   )
 }
 
-const LanguageIcon = props => {
-  const { language } = props
-  return <Language>{language}</Language>
-}
-
-// noticing a "bug" where clicking on the links works but also closes the tile.
-// tiles are wrapped in an onclick div and that gets clicked with the link
-const TechnicalInfo = props => {
-  const { codeLink, demoLink, languages } = props
+const ProjectLinks = props => {
+  const { codeLink, demoLink } = props
   return (
-    <TechnicalDetails>
-      <LinksHolder>
-        {codeLink && (
-          <ProjectLink href={codeLink} target="_blank">
-            {codeLink}
-          </ProjectLink>
-        )}
-        {demoLink && (
-          <ProjectLink href={demoLink} target="_blank">
-            {demoLink}
-          </ProjectLink>
-        )}
-      </LinksHolder>
-      <LanguagesHolder>
-        {languages.map(language => (
-          <LanguageIcon key={language} language={language} />
-        ))}
-      </LanguagesHolder>
-    </TechnicalDetails>
+    <LinksHolder>
+      {codeLink && (
+        <ProjectLink href={codeLink} target="_blank">
+          {codeLink}
+        </ProjectLink>
+      )}
+      {demoLink && (
+        <ProjectLink href={demoLink} target="_blank">
+          {demoLink}
+        </ProjectLink>
+      )}
+    </LinksHolder>
   )
 }
 
-// TODO: add more styling, images. Custom colors and themes for tiles?
 const TileExpanded = props => {
   const { title, description } = props
   return (
     <ExpandedDetails>
       <ExpandedTitle>{title}</ExpandedTitle>
-      <TechnicalInfo {...props} />
+      <DetailsHolder>
+        <ProjectLinks {...props} />
+        <TechnologyDetails {...props} />
+      </DetailsHolder>
       <div>{description}</div>
     </ExpandedDetails>
   )
@@ -94,7 +88,7 @@ export default class Tile extends Component {
     return (
       <ModalWrapper>
         <ProjectPreview onClick={this.handleOpenModal} background={image}>
-          <TilePreview {...this.props} />
+          <PreviewTitle>{this.props.blurb}</PreviewTitle>
         </ProjectPreview>
         <Modal
           isOpen={showModal}
