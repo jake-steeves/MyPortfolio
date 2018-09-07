@@ -12,10 +12,9 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <AppWrapper>
           <Header>
-            <Navbar />
+            <MyPicture src={myPic} className="myPic" alt="Jake Steeves" />
             <MyInfo />
           </Header>
-          <MyPicture src={myPic} className="myPic" alt="Jake Steeves" />
           <Portfolio />
         </AppWrapper>
       </ThemeProvider>
