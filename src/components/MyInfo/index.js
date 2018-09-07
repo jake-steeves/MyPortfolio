@@ -5,6 +5,9 @@ import { DetailHolder } from './styles'
 
 const details = {
   name: 'Jake Steeves',
+  profession: 'Chief Technical Officer for DEV Cloud',
+  employer: 'HSA DEV',
+  location: 'Cambridge, MA',
   university: 'Harvard College',
   concentration: 'Computer Science',
   birthday: moment()
@@ -14,14 +17,14 @@ const details = {
 }
 
 const MyInfo = () => {
-  const { name, university, concentration, birthday } = details
-  const age = moment().diff(birthday, 'years')
+  const { name, profession, location, employer } = details
   return (
     <DetailHolder>
       <div>{name}</div>
-      <div>{university}</div>
-      <div>{concentration}</div>
-      <div>{age}</div>
+      <div>{profession}</div>
+      <div>
+        at {employer} in {location}
+      </div>
     </DetailHolder>
   )
 }
