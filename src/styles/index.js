@@ -12,6 +12,8 @@ export const MyPicture = styled.img`
   border-radius: 50%;
   border: 2px solid ${themeGet('colors.primary')};
 
+  margin-top: ${themeGet('sizes.photoOffset')};
+
   height: auto;
   width: 290px;
 `
@@ -24,7 +26,6 @@ export const Header = styled.div`
 
   overflow: hidden;
   align-items: center;
-  padding: 50px 0 0 0;
 
   height: 500px;
   width: 100%;
