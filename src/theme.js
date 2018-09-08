@@ -6,6 +6,7 @@ const theme = {
     dark: '#102e56'
   },
   sizes: {
+    navbarHeight: '50px',
     sectionTitle: '32px'
   },
   fonts: {
