@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import Tile from './Tile'
 import projects from './projects'
 
-import { PortfolioHolder, PortfolioTitle, TileWrapper } from './styles'
+import { SectionTitle } from '../styles'
+import { PortfolioHolder, TileWrapper } from './styles'
 
 class Portfolio extends Component {
   render() {
     return (
       <PortfolioHolder>
-        <PortfolioTitle>Portfolio</PortfolioTitle>
+        <SectionTitle>Projects</SectionTitle>
         <TileWrapper>
           {projects.map(project => (
             <Tile {...project} />
