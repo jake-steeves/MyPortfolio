@@ -7,6 +7,7 @@ const theme = {
   },
   sizes: {
     navbarHeight: '50px',
+    photoOffset: '70px',
     sectionTitle: '32px'
   },
   fonts: {
