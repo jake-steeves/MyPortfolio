@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { configureAnchors } from 'react-scrollable-anchor'
 import ReactBreakpoints from 'react-breakpoints'
 import { ThemeProvider } from 'styled-components'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUser, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import breakpoints from './breakPoints'
@@ -15,7 +17,7 @@ import AboutMe from './components/AboutMe'
 import { AppWrapper, Header, MyPicture } from './styles'
 import myPic from './images/jakeSteeves.png'
 
-library.add(fab)
+library.add(fab, faUser, faFolderOpen)
 configureAnchors({ offset: -60 })
 
 class App extends Component {

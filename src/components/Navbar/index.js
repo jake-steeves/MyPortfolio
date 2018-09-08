@@ -2,12 +2,17 @@ import React, { Component } from 'react'
 import { withBreakpoints } from 'react-breakpoints'
 import { goToAnchor } from 'react-scrollable-anchor'
 
-import { NavbarContainer, MobileNav, DesktopNav } from './styles'
+import { NavbarContainer, MobileNav, DesktopNav, NavIcon } from './styles'
 
 const sections = ['About Me', 'Projects']
 const sectionAnchors = {
   'About Me': 'about',
-  Projects: 'project'
+  Projects: 'projects'
+}
+
+const sectionIcons = {
+  'About Me': 'user',
+  Projects: 'folder-open'
 }
 
 class Navbar extends Component {
@@ -19,7 +24,7 @@ class Navbar extends Component {
           const anchor = sectionAnchors[section]
           return breakpoints[currentBreakpoint] <= breakpoints.mobile ? (
             <MobileNav key={section} onClick={() => goToAnchor(anchor)}>
-              {section[0]}
+              <NavIcon icon={sectionIcons[section]} />
             </MobileNav>
           ) : (
             <DesktopNav key={section} onClick={() => goToAnchor(anchor)}>

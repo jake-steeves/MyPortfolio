@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { themeGet } from 'styled-system'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const NavbarContainer = styled.div`
   position: fixed;
@@ -28,6 +29,9 @@ const NavbarOption = styled.div`
 
 export const MobileNav = NavbarOption.extend`
   width: 100px;
+  &:hover > svg {
+    filter: drop-shadow(0 0 1px ${themeGet('colors.primary')});
+  }
 `
 
 export const DesktopNav = NavbarOption.extend`
@@ -36,4 +40,10 @@ export const DesktopNav = NavbarOption.extend`
   &:hover {
     font-weight: bold;
   }
+`
+
+export const NavIcon = styled(FontAwesomeIcon)`
+  color: ${themeGet('colors.primary')};
+  font-size: 18px;
+  padding: 4px;
 `
