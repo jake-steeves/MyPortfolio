@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 
-import { DetailHolder } from './styles'
+import { DetailHolder, Name, Profession, Employer } from './styles'
 
 const details = {
   name: 'Jake Steeves',
@@ -20,11 +20,11 @@ const MyInfo = () => {
   const { name, profession, location, employer } = details
   return (
     <DetailHolder>
-      <div>{name}</div>
-      <div>{profession}</div>
-      <div>
+      <Name>{name}</Name>
+      <Profession>{profession}</Profession>
+      <Employer>
         at {employer} in {location}
-      </div>
+      </Employer>
     </DetailHolder>
   )
 }
