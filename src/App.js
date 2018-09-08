@@ -5,7 +5,7 @@ import MyInfo from './components/MyInfo'
 import Portfolio from './components/Portfolio'
 import AboutMe from './components/AboutMe'
 import { AppWrapper, Header, MyPicture } from './styles'
-import myPic from './images/myPicture.jpg'
+import myPic from './images/jakeSteeves.png'
 
 class App extends Component {
   render() {
