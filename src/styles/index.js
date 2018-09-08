@@ -5,6 +5,7 @@ export const AppWrapper = styled.div`
   background: #edf2f5;
   min-height: 100vh;
   width: 100%;
+  padding-bottom: 50px;
 `
 
 export const MyPicture = styled.img`
