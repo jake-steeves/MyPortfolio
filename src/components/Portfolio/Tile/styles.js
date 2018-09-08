@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { themeGet } from 'styled-system'
 
 export const ModalWrapper = styled.div`
-  margin: 0 20px;
+  margin: 5px 20px 15px;
 `
 
 export const ProjectPreview = styled.div`
@@ -38,7 +38,6 @@ export const PreviewTitle = styled.div`
     0 -1px ${themeGet('colors.dark')};
   text-align: center;
 
-  margin-bottom: 10px;
   width: 80%;
 `
 
@@ -54,7 +53,7 @@ export const ExpandedTitle = styled.div`
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 0.5px;
-  margin-bottom: 20px;
+  margin: 5px 0;
 
   text-align: center;
 `
@@ -66,6 +65,7 @@ export const LinksHolder = styled.div`
 
   justify-content: center;
   margin-right: 20px;
+  margin-bottom: 5px;
 `
 
 export const ProjectLink = styled.a`
@@ -86,8 +86,8 @@ export const TechnologiesHolder = styled.div`
 
   justify-content: center;
 
-  max-width: 45%;
   margin-left: 20px;
+  margin-bottom: 5px;
 `
 
 export const Technology = styled.div`
