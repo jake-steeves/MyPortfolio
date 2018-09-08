@@ -7,6 +7,9 @@ const theme = {
   },
   sizes: {
     sectionTitle: '32px'
+  },
+  fonts: {
+    serif: '"Times New Roman", Times, serif'
   }
 }
 
