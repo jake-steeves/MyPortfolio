@@ -9,7 +9,7 @@ export const AboutMeHolder = styled.div`
 
   margin: 40px auto 20px;
   padding: 0 20px;
-  max-width: 1200px;
+  max-width: 1000px;
 `
 
 export const PersonalBio = styled.div`
