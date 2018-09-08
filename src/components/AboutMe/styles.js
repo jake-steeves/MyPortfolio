@@ -8,6 +8,7 @@ export const AboutMeHolder = styled.div`
   align-items: center;
 
   margin: 40px auto 20px;
+  padding: 0 20px;
   max-width: 1200px;
 `
 
