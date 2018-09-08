@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { themeGet } from 'styled-system'
 
 export const DetailHolder = styled.div`
   color: #edf3f8;
@@ -30,4 +31,9 @@ export const Profession = styled.div`
 export const Employer = styled.div`
   font-size: 16px;
   margin-bottom: 15px;
+`
+
+export const EmployerLink = styled.a.attrs({ target: '_blank' })`
+  color: ${themeGet('colors.primary')};
+  text-decoration: none;
 `

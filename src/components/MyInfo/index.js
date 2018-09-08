@@ -1,12 +1,19 @@
 import React from 'react'
 import moment from 'moment'
 
-import { DetailHolder, Name, Profession, Employer } from './styles'
+import {
+  DetailHolder,
+  Name,
+  Profession,
+  Employer,
+  EmployerLink
+} from './styles'
 
 const details = {
   name: 'Jake Steeves',
   profession: 'Chief Technical Officer for DEV Cloud',
   employer: 'HSA DEV',
+  employerLink: 'https://www.dev.hsa.net',
   location: 'Cambridge, MA',
   university: 'Harvard College',
   concentration: 'Computer Science',
@@ -17,13 +24,14 @@ const details = {
 }
 
 const MyInfo = () => {
-  const { name, profession, location, employer } = details
+  const { name, profession, location, employer, employerLink } = details
   return (
     <DetailHolder>
       <Name>{name}</Name>
       <Profession>{profession}</Profession>
       <Employer>
-        at {employer} in {location}
+        at <EmployerLink href={employerLink}>{employer}</EmployerLink> in{' '}
+        {location}
       </Employer>
     </DetailHolder>
   )
