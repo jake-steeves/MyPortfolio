@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withBreakpoints } from 'react-breakpoints'
 
-import { NavbarContainer } from './styles'
+import { NavbarContainer, MobileNav, DesktopNav } from './styles'
 
 const sections = ['About Me', 'Projects']
 
@@ -13,9 +13,9 @@ class Navbar extends Component {
         {sections.map(
           section =>
             breakpoints[currentBreakpoint] <= breakpoints.mobile ? (
-              <div key={section}>{section[0]}</div>
+              <MobileNav key={section}>{section[0]}</MobileNav>
             ) : (
-              <div key={section}>{section}</div>
+              <DesktopNav key={section}>{section}</DesktopNav>
             )
         )}
       </NavbarContainer>
