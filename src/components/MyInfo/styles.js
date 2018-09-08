@@ -15,7 +15,7 @@ export const DetailHolder = styled.div`
 
   overflow: hidden;
 
-  width: 80%;
+  width: 400px;
 `
 
 export const Name = styled.div`
@@ -36,4 +36,14 @@ export const Employer = styled.div`
 export const EmployerLink = styled.a.attrs({ target: '_blank' })`
   color: ${themeGet('colors.primary')};
   text-decoration: none;
+`
+
+export const Email = styled.div`
+  font-size: 16px;
+  margin-bottom: 2px;
+`
+
+export const Phone = styled.div`
+  font-size: 16px;
+  margin-bottom: 4px;
 `

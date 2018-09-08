@@ -1,12 +1,13 @@
 import React from 'react'
-import moment from 'moment'
 
 import {
   DetailHolder,
   Name,
   Profession,
   Employer,
-  EmployerLink
+  EmployerLink,
+  Email,
+  Phone
 } from './styles'
 
 const details = {
@@ -15,16 +16,20 @@ const details = {
   employer: 'HSA DEV',
   employerLink: 'https://www.dev.hsa.net',
   location: 'Cambridge, MA',
-  university: 'Harvard College',
-  concentration: 'Computer Science',
-  birthday: moment()
-    .date(5)
-    .month(5)
-    .year(1997) // June 5th, 1997
+  email: 'jsteeves@college.harvard.edu',
+  phone: '(508) 446-7586'
 }
 
 const MyInfo = () => {
-  const { name, profession, location, employer, employerLink } = details
+  const {
+    name,
+    profession,
+    location,
+    employer,
+    employerLink,
+    email,
+    phone
+  } = details
   return (
     <DetailHolder>
       <Name>{name}</Name>
@@ -33,6 +38,8 @@ const MyInfo = () => {
         at <EmployerLink href={employerLink}>{employer}</EmployerLink> in{' '}
         {location}
       </Employer>
+      <Email>{email}</Email>
+      <Phone>{phone}</Phone>
     </DetailHolder>
   )
 }
