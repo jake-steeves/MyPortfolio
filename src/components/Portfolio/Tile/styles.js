@@ -50,8 +50,10 @@ export const ExpandedDetails = styled.div`
 `
 
 export const ExpandedTitle = styled.div`
+  font-family: ${themeGet('fonts.serif')};
   font-size: 36px;
   font-weight: bold;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
 
   text-align: center;
