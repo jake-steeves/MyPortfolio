@@ -8,13 +8,26 @@ export const DetailHolder = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  font-size: 1.75em;
+  font-size: 24px;
   font-family: 'Roboto', 'sans-serif';
   text-align: center;
 
   overflow: hidden;
 
-  margin-top: 30px;
-
   width: 80%;
+`
+
+export const Name = styled.div`
+  font-size: 22px;
+  margin-bottom: 4px;
+`
+
+export const Profession = styled.div`
+  font-size: 18px;
+  margin-bottom: 2px;
+`
+
+export const Employer = styled.div`
+  font-size: 16px;
+  margin-bottom: 15px;
 `

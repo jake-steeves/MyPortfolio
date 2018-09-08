@@ -14,9 +14,10 @@ export const MyPicture = styled.img`
   border: 2px solid ${themeGet('colors.primary')};
 
   margin-top: ${themeGet('sizes.photoOffset')};
+  margin-bottom: 15px;
 
   height: auto;
-  width: 290px;
+  width: 200px;
 `
 
 export const Header = styled.div`
@@ -24,11 +25,11 @@ export const Header = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  overflow: hidden;
   align-items: center;
 
-  height: 500px;
+  overflow: hidden;
+  padding-bottom: 10px;
+
   width: 100%;
 `
 
