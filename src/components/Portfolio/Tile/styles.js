@@ -64,12 +64,11 @@ export const LinksHolder = styled.div`
   align-items: flex-start;
 
   justify-content: center;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin: 0 10px 5px;
 `
 
 export const ProjectLink = styled.a`
-  margin: 5px 10px;
+  margin: 5px 0;
 `
 
 export const DetailsHolder = styled.div`
@@ -85,9 +84,9 @@ export const TechnologiesHolder = styled.div`
   flex-flow: row wrap;
 
   justify-content: center;
+  align-items: center;
 
-  margin-left: 20px;
-  margin-bottom: 5px;
+  margin: 0 10px 5px;
 `
 
 export const Technology = styled.div`
