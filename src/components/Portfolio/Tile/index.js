@@ -4,8 +4,9 @@ import {
   ModalWrapper,
   ProjectPreview,
   PreviewTitle,
-  ExpandedDetails,
+  ProjectCloseIcon,
   ExpandedTitle,
+  ExpandedDetails,
   DetailsHolder,
   LinksHolder,
   ProjectLink,
@@ -101,9 +102,7 @@ class Tile extends Component {
           className="modalExpanded"
           overlayClassName="modalOverlay"
         >
-          <button type="button" onClick={handleCloseModal}>
-            X
-          </button>
+          <ProjectCloseIcon onClick={handleCloseModal} />
           <TileExpanded {...props} />
         </Modal>
       </ModalWrapper>

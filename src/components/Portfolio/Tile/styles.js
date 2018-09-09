@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { themeGet } from 'styled-system'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const ModalWrapper = styled.div`
   margin: 5px 20px 15px;
@@ -39,6 +40,18 @@ export const PreviewTitle = styled.div`
   text-align: center;
 
   width: 80%;
+`
+
+export const ProjectCloseIcon = styled(FontAwesomeIcon).attrs({
+  icon: 'times-circle'
+})`
+  color: ${themeGet('colors.dark')};
+  cursor: pointer;
+  font-size: 24px;
+
+  &:hover {
+    filter: drop-shadow(0 0 1px ${themeGet('colors.dark')});
+  }
 `
 
 export const ExpandedDetails = styled.div`

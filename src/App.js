@@ -8,7 +8,8 @@ import {
   faHome,
   faUser,
   faFolderOpen,
-  faBuilding
+  faBuilding,
+  faTimesCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -21,7 +22,7 @@ import Portfolio from './components/Portfolio'
 import AboutMe from './components/AboutMe'
 import { AppWrapper, Header, MyPicture } from './styles'
 
-library.add(fab, faHome, faUser, faFolderOpen, faBuilding)
+library.add(fab, faHome, faUser, faFolderOpen, faBuilding, faTimesCircle)
 configureAnchors({ offset: -60 })
 
 class App extends Component {
