@@ -64,12 +64,11 @@ export const LinksHolder = styled.div`
   align-items: flex-start;
 
   justify-content: center;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin: 0 10px 5px;
 `
 
 export const ProjectLink = styled.a`
-  margin: 5px 10px;
+  margin: 5px 0;
 `
 
 export const DetailsHolder = styled.div`
@@ -85,9 +84,9 @@ export const TechnologiesHolder = styled.div`
   flex-flow: row wrap;
 
   justify-content: center;
+  align-items: center;
 
-  margin-left: 20px;
-  margin-bottom: 5px;
+  margin: 0 10px 5px;
 `
 
 export const Technology = styled.div`
@@ -104,4 +103,11 @@ export const Technology = styled.div`
   margin: 5px 5px;
   padding: 8px 20px 0 20px;
   text-align: center;
+`
+
+export const Description = styled.div`
+  color: ${themeGet('colors.dark')};
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 15px 10px;
 `
