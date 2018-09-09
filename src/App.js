@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import { configureAnchors } from 'react-scrollable-anchor'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import ReactBreakpoints from 'react-breakpoints'
 import { ThemeProvider } from 'styled-components'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-  faBuilding,
+  faHome,
   faUser,
-  faFolderOpen
+  faFolderOpen,
+  faBuilding
 } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -21,7 +22,7 @@ import AboutMe from './components/AboutMe'
 import { AppWrapper, Header, MyPicture } from './styles'
 import myPic from './images/jakeSteeves.png'
 
-library.add(fab, faBuilding, faUser, faFolderOpen)
+library.add(fab, faHome, faUser, faFolderOpen, faBuilding)
 configureAnchors({ offset: -60 })
 
 class App extends Component {
@@ -30,11 +31,13 @@ class App extends Component {
       <ReactBreakpoints breakpoints={breakpoints}>
         <ThemeProvider theme={theme}>
           <AppWrapper>
-            <Header>
-              <Navbar />
-              <MyPicture src={myPic} className="myPic" alt="Jake Steeves" />
-              <MyInfo />
-            </Header>
+            <ScrollableAnchor id="home">
+              <Header>
+                <Navbar />
+                <MyPicture src={myPic} className="myPic" alt="Jake Steeves" />
+                <MyInfo />
+              </Header>
+            </ScrollableAnchor>
             <AboutMe />
             <Portfolio />
           </AppWrapper>
