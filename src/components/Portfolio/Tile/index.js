@@ -85,23 +85,28 @@ export default class Tile extends Component {
   handleCloseModal = () => this.setState({ showModal: false })
 
   render() {
-    const { image, showModal } = this.state
+    const {
+      handleOpenModal,
+      handleCloseModal,
+      props,
+      state: { image, showModal }
+    } = this
     return (
       <ModalWrapper>
-        <ProjectPreview onClick={this.handleOpenModal} background={image}>
-          <PreviewTitle>{this.props.blurb}</PreviewTitle>
+        <ProjectPreview onClick={handleOpenModal} background={image}>
+          <PreviewTitle>{props.title}</PreviewTitle>
         </ProjectPreview>
         <Modal
           isOpen={showModal}
           contentLabel="fullProjectInfo"
-          onRequestClose={this.handleCloseModal}
+          onRequestClose={handleCloseModal}
           className="modalExpanded"
           overlayClassName="modalOverlay"
         >
-          <button type="button" onClick={this.handleCloseModal}>
+          <button type="button" onClick={handleCloseModal}>
             X
           </button>
-          <TileExpanded {...this.props} />
+          <TileExpanded {...props} />
         </Modal>
       </ModalWrapper>
     )

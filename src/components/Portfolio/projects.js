@@ -15,7 +15,6 @@ const projects = [
   {
     key: 0,
     title: 'RH Playlist',
-    blurb: 'RH Playlist',
     description: 'TODO: add a description',
     image: 'stage.jpg',
     technologies: ['Python', 'JavaScript', 'HTML', 'CSS', 'MySQL'],
@@ -24,8 +23,7 @@ const projects = [
   },
   {
     key: 1,
-    title: 'CS263 Final Project',
-    blurb: 'Public Image Botnet Controller',
+    title: 'Public Image Botnet Controller',
     description: 'TODO: add a description',
     image: 'bots.jpg',
     technologies: ['Python', 'shell'],
@@ -35,7 +33,6 @@ const projects = [
   {
     key: 2,
     title: 'GroupMe Bots',
-    blurb: 'GroupMe Bots',
     description: 'TODO: add a description',
     image: 'groupme.png',
     technologies: ['Python', 'shell'],
