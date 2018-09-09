@@ -14,6 +14,7 @@ export const AboutMeHolder = styled.div`
 
 export const PersonalBio = styled.div`
   color: ${themeGet('colors.dark')};
+  line-height: 1.5;
 `
 
 export const History = styled.div`
