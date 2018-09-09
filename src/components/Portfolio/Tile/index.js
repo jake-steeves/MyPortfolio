@@ -63,7 +63,7 @@ const TileExpanded = props => {
   )
 }
 
-export default class Tile extends Component {
+class Tile extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -112,3 +112,5 @@ export default class Tile extends Component {
     )
   }
 }
+
+export default Tile
