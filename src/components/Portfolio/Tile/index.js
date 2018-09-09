@@ -10,7 +10,8 @@ import {
   LinksHolder,
   ProjectLink,
   TechnologiesHolder,
-  Technology
+  Technology,
+  Description
 } from './styles'
 import './modalStyles.css'
 
@@ -57,7 +58,7 @@ const TileExpanded = props => {
         <ProjectLinks {...props} />
         <TechnologyDetails {...props} />
       </DetailsHolder>
-      <div>{description}</div>
+      <Description>{description}</Description>
     </ExpandedDetails>
   )
 }

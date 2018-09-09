@@ -104,3 +104,10 @@ export const Technology = styled.div`
   padding: 8px 20px 0 20px;
   text-align: center;
 `
+
+export const Description = styled.div`
+  color: ${themeGet('colors.dark')};
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 15px 10px;
+`
