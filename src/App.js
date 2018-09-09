@@ -20,7 +20,6 @@ import MyInfo from './components/MyInfo'
 import Portfolio from './components/Portfolio'
 import AboutMe from './components/AboutMe'
 import { AppWrapper, Header, MyPicture } from './styles'
-import myPic from './images/jakeSteeves.png'
 
 library.add(fab, faHome, faUser, faFolderOpen, faBuilding)
 configureAnchors({ offset: -60 })
@@ -34,7 +33,11 @@ class App extends Component {
             <ScrollableAnchor id="home">
               <Header>
                 <Navbar />
-                <MyPicture src={myPic} className="myPic" alt="Jake Steeves" />
+                <MyPicture
+                  src="/jakeSteeves.png"
+                  className="myPic"
+                  alt="Jake Steeves"
+                />
                 <MyInfo />
               </Header>
             </ScrollableAnchor>

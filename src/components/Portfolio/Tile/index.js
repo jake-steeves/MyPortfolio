@@ -67,17 +67,14 @@ class Tile extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showModal: false,
-      image: ''
+      showModal: false
     }
     this.handleOpenModal = this.handleOpenModal.bind(this)
     this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
   componentWillMount() {
-    const image = require(`./images/${this.props.image}`)
     Modal.setAppElement('body')
-    this.setState({ image })
   }
 
   handleOpenModal = () => this.setState({ showModal: true })
@@ -89,12 +86,13 @@ class Tile extends Component {
       handleOpenModal,
       handleCloseModal,
       props,
-      state: { image, showModal }
+      state: { showModal }
     } = this
+    const { image, title } = props
     return (
       <ModalWrapper>
         <ProjectPreview onClick={handleOpenModal} background={image}>
-          <PreviewTitle>{props.title}</PreviewTitle>
+          <PreviewTitle>{title}</PreviewTitle>
         </ProjectPreview>
         <Modal
           isOpen={showModal}
