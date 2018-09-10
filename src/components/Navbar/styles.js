@@ -18,7 +18,7 @@ export const NavbarOptions = styled.div`
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
 `
 
 const NavbarOption = styled.div`
