@@ -16,7 +16,7 @@ class AboutMe extends Component {
               studying computer science, but technology is a strong passion of
               mine outside of academics. I started working professionally with
               computers as a systems administration intern in May 2016. At
-              Bullhorn, I learned about administering deploys to and upkeep for
+              Bullhorn, I learned about automatic deploys and maintenance for
               servers that spanned across data centers and the cloud. After
               using shell scripts, Python, and Flask to create automation tools,
               I became enamored with all forms of development, and I started
