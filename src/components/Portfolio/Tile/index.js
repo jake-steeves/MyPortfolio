@@ -51,13 +51,13 @@ const ProjectLinks = props => {
 }
 
 const TileExpanded = props => {
-  const { title, description } = props
+  const { title, description, codeLink, demoLink } = props
   return (
     <ExpandedDetails>
       <ExpandedTitle>{title}</ExpandedTitle>
       <DetailsHolder>
-        <ProjectLinks {...props} />
         <TechnologyDetails {...props} />
+        {(codeLink || demoLink) && <ProjectLinks {...props} />}
       </DetailsHolder>
       <Description>{description}</Description>
     </ExpandedDetails>
