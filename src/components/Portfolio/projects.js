@@ -20,7 +20,7 @@ const projects = [
     codeLink: 'https://github.com/jake-steeves/jake-portfolio',
     demoLink: '',
     description:
-      'I started this personal website as part of my onboarding process at HSA DEV. As I developed better engineering and project planning skills, I used my new experience to implement this site and practice what I had learned. This is a static webstie created using the React JavaScript library, using styled components for CSS. The github repo was configured by DEV standards for linting and continuous integration with Travis CI. Distributed on Amazon Web Services with S3 for serverless hosting and CloudFront to provide content distribution and SSL certification through ACM.'
+      'I started this personal website as part of my onboarding process at HSA DEV. As I developed better engineering and project planning skills, I used my new experience to implement this site and practice what I had learned. This is a static website created using the React JavaScript library, using styled components for CSS. The github repo was configured by DEV standards for linting and continuous integration with Travis CI. Distributed on Amazon Web Services with S3 for serverless hosting and CloudFront to provide content distribution and SSL certification through ACM.'
   },
   {
     key: 1,
